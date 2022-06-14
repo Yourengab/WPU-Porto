@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.fixed-nav {
+  @apply fixed z-[9999] bg-white bg-opacity-70 dark:bg-dark dark:bg-opacity-50;
+  @apply backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+.ham-line {
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
+}
+
+.ham-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.ham-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.ham-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.project {
+  @apply mb-8 w-full overflow-hidden rounded bg-white shadow-lg;
+}
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
